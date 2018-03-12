@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TypesFlowSelectionViewController" customModule="Doggos" customModuleProvider="target">
+            <connections>
+                <outlet property="subbreedsSwitch" destination="d3M-2B-oZD" id="hhI-mR-p9J"/>
+                <outlet property="view" destination="ren-FS-Ujj" id="tLp-BK-DVO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ren-FS-Ujj">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_select_flow_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="s7O-JB-7bt">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5V-DR-wPl">
+                    <rect key="frame" x="8" y="24" width="46" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="Xmv-PL-NX8"/>
+                        <constraint firstAttribute="height" constant="46" id="b55-5X-Fg7"/>
+                    </constraints>
+                    <state key="normal" image="ic_cross"/>
+                    <connections>
+                        <action selector="closeButtonAction:" destination="-1" eventType="touchUpInside" id="jlB-mF-eZp"/>
+                    </connections>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d3M-2B-oZD">
+                    <rect key="frame" x="94" y="114" width="51" height="31"/>
+                    <connections>
+                        <action selector="subbreedsSwitchAction:" destination="-1" eventType="valueChanged" id="yVk-Uv-4Yj"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subbreeds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I6R-ub-cEf">
+                    <rect key="frame" x="8" y="120" width="78" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="s7O-JB-7bt" firstAttribute="bottom" secondItem="ren-FS-Ujj" secondAttribute="bottom" id="Bo2-W4-M7l"/>
+                <constraint firstItem="d3M-2B-oZD" firstAttribute="centerY" secondItem="I6R-ub-cEf" secondAttribute="centerY" id="PYG-wq-Wh2"/>
+                <constraint firstAttribute="trailing" secondItem="s7O-JB-7bt" secondAttribute="trailing" id="Rn9-Sp-QGw"/>
+                <constraint firstItem="L5V-DR-wPl" firstAttribute="leading" secondItem="ut0-Ht-QgO" secondAttribute="leading" constant="8" id="Srw-XW-KAl"/>
+                <constraint firstItem="s7O-JB-7bt" firstAttribute="leading" secondItem="ren-FS-Ujj" secondAttribute="leading" id="U1L-GA-c0d"/>
+                <constraint firstItem="s7O-JB-7bt" firstAttribute="top" secondItem="ren-FS-Ujj" secondAttribute="top" id="VIm-wu-tcd"/>
+                <constraint firstItem="I6R-ub-cEf" firstAttribute="top" secondItem="ut0-Ht-QgO" secondAttribute="top" constant="100" id="cKr-At-YMz"/>
+                <constraint firstItem="d3M-2B-oZD" firstAttribute="leading" secondItem="I6R-ub-cEf" secondAttribute="trailing" constant="8" id="eld-H8-mS1"/>
+                <constraint firstItem="I6R-ub-cEf" firstAttribute="leading" secondItem="ut0-Ht-QgO" secondAttribute="leading" constant="8" id="kIK-rj-WO7"/>
+                <constraint firstItem="L5V-DR-wPl" firstAttribute="top" secondItem="ut0-Ht-QgO" secondAttribute="top" constant="4" id="seT-FV-M04"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ut0-Ht-QgO"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="V7Z-zh-i5y" appends="YES" id="Oz7-Tg-IRv"/>
+            </connections>
+            <point key="canvasLocation" x="54.5" y="53.5"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="V7Z-zh-i5y">
+            <connections>
+                <action selector="panGestureAction:" destination="-1" id="Uw3-YC-9Pt"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ic_cross" width="21" height="21"/>
+        <image name="img_select_flow_gradient" width="375" height="667"/>
+    </resources>
+</document>

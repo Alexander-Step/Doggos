@@ -1,0 +1,6 @@
+framework module Pods_DoggosTests {
+  umbrella header "Pods-DoggosTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
