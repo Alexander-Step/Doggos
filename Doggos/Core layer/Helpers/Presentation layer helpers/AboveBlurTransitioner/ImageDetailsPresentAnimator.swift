@@ -60,10 +60,6 @@ extension ImageDetailsPresentAnimator: UIViewControllerAnimatedTransitioning {
       centralImageView.frame = centralImageEndFrame
       imageDetailsViewController.addBlurEffect()
     }
-    viewsAnimator.addAnimations({
-      centralImageView.transform = centralImageView.transform.rotated(by: CGFloat(Double.pi))
-      centralImageView.transform = centralImageView.transform.rotated(by: CGFloat(Double.pi))
-    }, delayFactor: 0.1)
     
     // Back button with delay
     imageDetailsViewController.backButton?.alpha = backButtonPresentingStartAlpha
